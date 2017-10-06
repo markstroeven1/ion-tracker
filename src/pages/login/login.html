@@ -1,0 +1,41 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="flex-container centered">
+<img src="assets/img/fwg.png" class="fwg-logo"/>
+</div>
+<div class="text-container">
+<h1 class="header-title head-text">
+  Made
+</h1>
+<h1 class="header-title head-text">
+    <strong>Monitor</strong>
+</h1>
+</div>
+<div class="container" padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+            <img src="assets/img/Team.png" class="team-image"/>
+            <ion-card class="login-box>">
+              <ion-card-content>
+            <ion-item class="margin-5 flex-element">
+              <ion-input placeholder="Username" type="text"></ion-input>
+            </ion-item>
+          </ion-card-content>
+          <div class="empty-space"></div>
+          <ion-card-content>
+            <ion-item class="margin-5 flex-element">
+              <ion-input placeholder="Password" type="password"></ion-input>
+            </ion-item>
+          </ion-card-content>
+                    <div class="empty-space"></div>
+            <button class="button-login" ion-button full (click)="doLogin()">Login</button>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

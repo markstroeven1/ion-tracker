@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+$bg: #35AAA6;
+
+//COLORS
+$grey: #a5a5a5;
+$home: $grey;
+$white: #fff;
+$green: #4DB9A8;
+$green_dark: #239DA5;
+$green_light: #61C7AA;
+$blue: #002C59;
+$mid_blue: #135293;
+$light_blue: #003061;
+$transparent_blue: rgba(45, 123, 152, 0.8);
+$stone: #FF7569;
+$mid_stone: lighten($stone, 15%);
+$light_stone: lighten($mid_stone, 10%);
+//
+//BORDER
+$radius:50%;
+//FONTS
+$reg: 'bitterRegular',
+Georgia,
+'Times New Roman',
+Times,
+serif;
+//
+$bold: 'bitterBold',
+Georgia,
+'Times New Roman',
+Times,
+serif;
+//FONTWEIGHT
+$thin: 300;
+$regular: 400;
+$strong: 600;
+//FONTSIZE
+$small: 0.8em;
+$base_font: 13px;
+//DIMENSIONS
+.text-input {
+    width: 80%;
+}
+
+.text-dark {
+    color: $blue;
+}
+
+.number-input {
+    width: 30%;
+}

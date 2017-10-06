@@ -1,0 +1,116 @@
+@import "../../vars.scss";
+
+page-login{
+position: relative;
+  background: $white!important;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($white, $green_light, $green_dark)!important;
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($white, $green_light, $green_dark)!important;
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($white, $green_light, $green_dark)!important;
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient($white, $green_light, $green_dark)!important;
+  /* Standard syntax */
+
+.text-container{
+  margin-top: 10vh;
+}
+  header.header {
+      .header-title {
+          font-family: 'bitterRegular';
+          text-align: center;
+          width: 60vw;
+          line-height: 0.9;
+          margin: 0.35em 20vw 0 20vw;
+          strong {
+              font-family: 'bitterBold';
+          }
+      }
+      .header-logo {
+          width: 20vw;
+          margin: 2vh 40vw 0 40vw;
+      }
+  }
+
+
+.fwg-logo{
+  width: 125px;
+  height: 50px;
+}
+
+.head-text{
+  color: #002F50;
+text-align: center!important;
+margin-bottom: 0px!important;
+margin-top: 0px!important;
+}
+
+
+.text-align-center{
+  text-align: center;
+}
+  .centered{
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+
+  background: $white;
+
+.front{
+  z-index: 99999;
+  position: relative;
+  width: 300px;
+  height: 100;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5vh;
+}
+.empty-space{
+  height: 2.5vh;
+  background-color: #239DA5;
+}
+.container {
+  position: relative;
+  top: -100px;
+  display: flex!important;
+  justify-content: space-between!important;
+  ion-card{
+    ion-card-content{
+      padding: 0px;
+    }
+    ion-item{
+      margin-top: 0px!important;
+    }
+    .item-input::after {
+      border-bottom-color: transparent !important;
+    }
+    .button-login{
+      background-color: $blue!important;
+      margin: 0px!important;
+    }
+    top: 25vh!important;
+    border: 10px solid $green_dark!important;
+    position: relative!important;
+    .login-box{
+      background-color: $green_dark!important;
+    }
+    .margin-5{
+      margin-top: 10px;
+    }
+    .flex-element{
+      flex: 1;
+    }
+  }
+  .team-image{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 15vh!important;
+    left: 0;
+    right: 0;
+  }
+}
+}

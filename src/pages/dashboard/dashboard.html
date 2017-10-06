@@ -1,0 +1,52 @@
+
+
+<div class="flex-container centered">
+<img src="assets/img/fwg.png" class="fwg-logo"/>
+</div>
+
+<div class="carousel">
+    <figure>
+      <div long-press (onLongPress)="pressed()" (onLongPressEnd)="released()" duration="50" (swipe) = "carouselChange($event)"  class="orb" *ngFor="let index of indices" (click)="handleClick(index)">
+        <div *ngIf="goals[index] !== undefined">
+
+        <div class="content">
+          <img src="{{goals[index].icon}}"/>
+          <h4>{{goals[index].goalName}}</h4>
+          <p>{{goals[index].goalPoints}}</p>
+        </div>
+      </div>
+
+
+      <div *ngIf="goals[index] === undefined">
+
+      <div class="content">
+        <img src="assets/img/Empty.png"/>
+        <h4>Nog geen doel</h4>
+        <p>Maak een doel aan!</p>
+      </div>
+    </div>
+    </div>
+    </figure>
+    <!-- <nav>
+        <button ion-button (click)="carouselChange('next')">Prev</button>
+        <button ion-button (click)="carouselChange('prev')">Next</button>
+    </nav> -->
+</div>
+
+<div id="sneakPeak" [@sneekPeak]="state" style="text-align: center;">
+  <div class="content" [@fade]="state">
+  <div *ngIf="goals[selectedIndex]!==undefined">
+  <h4>{{goals[selectedIndex].goalName}}</h4>
+  <!-- <p>{{goals[selectedIndex].description}}</p> -->
+  <button ion-button (click)="enterGoal(goals[selectedIndex])">Ga naar doel</button>
+</div>
+
+<div *ngIf="goals[selectedIndex]===undefined">
+<button ion-button class="dashboard-button" (click)="enterGoal(goals[selectedIndex])">Nieuw doel.</button>
+</div>
+</div>
+</div>
+
+<div class="person">
+  <img src="assets/img/lady.png"/>
+</div>

@@ -1,0 +1,73 @@
+
+<div class="flex-container centered">
+<img src="assets/img/fwg.png" class="fwg-logo"/>
+</div>
+
+<div id="main-container">
+
+
+<div class="person">
+  <img src="assets/img/lady.png"/>
+</div>
+
+<div class="edit-button" (click)="editGoal(goalObject)">
+<button ion-button>Edit</button>
+</div>
+
+<div id="breakdown" [@editMode]="state">
+
+  <div class="flex-container container-top-bar" (click)="toggleEditMode()" (click)="toggleBreakdownActive()">
+    <div class="flex-element-1">
+      <h6>{{goalObject.goalName}}</h6>
+    </div>
+  </div>
+
+
+  <div class="flex-container container-middle-bar" id="actionbar">
+    <div class="flex-element-1 corner-top-left-goal">
+      <ion-icon ios="ios-help-buoy" md="md-help-buoy"></ion-icon>
+    </div>
+    <div class="flex-element-5 corner-top-right-goal">
+      <h4>Doel</h4>
+      <p>{{goalObject.goalDescription}}</p>
+    </div>
+  </div>
+
+
+  <div class="flex-container container-middle-bar">
+    <div class="flex-element-1 corner-top-left-action">
+      <ion-icon ios="ios-help-buoy" md="md-help-buoy"></ion-icon>
+    </div>
+    <div class="flex-element-5 corner-top-right-action">
+      <h4>Acties</h4>
+      <p *ngFor="let action of goalObject.actions; let i = index"><span>{{i+1}} </span>{{action.actionLabel}}</p>
+    </div>
+  </div>
+
+  <div class="flex-container container-middle-bar" *ngFor="let action of goalObject.actions">
+    <div [@breakdown]="breakDownState" class="flex-element-1 actions corner-top-left-action">
+      <p>{{action.actionPoints}}</p>
+    </div>
+    <div [@breakdown]="breakDownState" class="flex-element-5 actions corner-top-right-action">
+      <p>{{action.actionLabel}}</p>
+    </div>
+  </div>
+
+
+  <div class="flex-container container-bottom-bar">
+    <div class="flex-element-1 corner-bottom-left">
+      <ion-icon ios="ios-help-buoy" md="md-help-buoy"></ion-icon>
+    </div>
+    <div class="flex-element-5 corner-bottom-right">
+      <h4>Einddatum</h4>
+      <p>{{goalObject.goalEndDate}}</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="wizzard-navigation-bar flex-container">
+  <button *ngIf="state=='inactive'" ion-button class="flex-element-1 wizzard-button" (click)="routeHome()">  <ion-icon name="arrow-back"></ion-icon></button>
+  <button *ngIf="state=='active'" ion-button class="flex-element-1 wizzard-button" (click)="toggleEditMode()">  <ion-icon ios="ios-close" md="md-close"></ion-icon></button>
+  <button ion-button class="flex-element-1 wizzard-button" (click)="routeHome()"><ion-icon name="home"></ion-icon></button>
+  <button ion-button class="flex-element-1 wizzard-button" (click)="nextStep(currentStep)"> <ion-icon ios="ios-checkmark-circle" md="md-checkmark-circle"></ion-icon></button>
+</div>

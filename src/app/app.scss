@@ -1,0 +1,153 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import "fonts.scss";
+@import "vars.scss";
+//
+html body {
+    background: $white!important;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient($white, $green_light, $green_dark)!important;
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($white, $green_light, $green_dark)!important;
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($white, $green_light, $green_dark)!important;
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient($white, $green_light, $green_dark)!important;
+    /* Standard syntax */
+}
+
+//
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 .intro {
+    font-family: $strong;
+    font-family: $reg;
+}
+
+h1 {
+    font-size: 2.53em;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: $base_font;
+}
+
+//
+.flex-container {
+    display: flex;
+    justify-content: center!important;
+    flex-wrap: wrap;
+}
+
+.text-small {
+    font-size: $small;
+}
+
+.flex-img {
+    flex-flow: row;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.inline {
+    display: inline;
+}
+
+.text-align-center {
+    text-align: center!important;
+}
+
+.flex-element-1 {
+    flex: 1;
+}
+
+.marginated {
+    margin: 10px!important;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.mat-dialog-container {
+    max-width: none !important;
+    background-color: $green !important;
+}
+
+.mat-input-underline {
+    display: none !important;
+    visibility: hidden;
+}
+
+.mat-input-element {
+    background: $white !important;
+    padding: 0.25em 0.75em !important;
+}
+
+.mat-input-placeholder-wrapper {
+    display: none !important;
+}
+
+.mat-input-infix {
+    padding: 0 !important;
+    border-top: 0 !important;
+}
+
+.mat-input-wrapper {
+    padding-bottom: 0 !important;
+}
+
+.cdk-overlay-pane {
+    bottom: 5em !important;
+    // left: 0;
+    // position: fixed !important;
+    width: 90vw;
+    margin: 0 5vw;
+}
+
+snack-bar-container {
+    background: $transparent_blue !important;
+    box-shadow: none !important;
+}
+
+simple-snack-bar.mat-simple-snackbar {
+    color: $white !important;
+}
+
+//FLEX
+.padded {
+    padding: 5px;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.flex-element-1 {
+    overflow-y: scroll;
+    flex: 1;
+}
+
+.flex-element-5 {
+    flex: 5;
+}

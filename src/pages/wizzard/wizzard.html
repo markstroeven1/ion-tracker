@@ -1,0 +1,180 @@
+<div class="flex-container centered">
+<img src="assets/img/fwg.png" class="fwg-logo"/>
+</div>
+
+<div class="person">
+  <img src="assets/img/lady.png"/>
+</div>
+
+<div id="singleGoal">
+  <!-- STEP 1 -->
+    <div class="main-container border" *ngIf="currentStep == 1">
+      <form [formGroup]="firstStepForm">
+        <div class="flex-container goal-content">
+            <div class="goal-flex-element-05"></div>
+            <div class="goal-container-top goal-flex-element-5">
+                <div style="display: flex" class="white-text">
+                    <div class="flex-element-5 align-center">
+                        <h6>Nieuw doel aanmaken</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-container goal-content">
+            <div class="goal-flex-element-05"></div>
+            <div class="goal-container-middle goal-flex-element-5">
+                <div style="display: flex" class="white-text">
+                    <div class="flex-element-5 align-center">
+                        <p class="padded-right">Formuleer een doel waar jij je in herkent en dat ook voor jou haalbaar is.</p>
+                          <ion-input formControlName="goalName" placeholder="" type="text"></ion-input>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-container goal-content">
+            <div class="goal-flex-element-05"></div>
+            <div class="goal-container-middle goal-flex-element-5">
+                <div style="display: flex" class="white-text">
+                    <div class="flex-element-5 align-center">
+                        <p class="padded-right">Geef je doel een korte omschrijving</p>
+                          <ion-input formControlName="goalDescription" placeholder="" type="text"></ion-input>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-container goal-content">
+            <div class="goal-flex-element-05"></div>
+            <div class="goal-container-lower goal-flex-element-5">
+                <div style="display: flex" class="white-text">
+                    <div class="flex-element-5 align-center">
+                        <p class="padded-right">Geef in punten aan wat de waarde van dit doel is.</p>
+                          <ion-input formControlName="goalPoints" placeholder="" type="number"></ion-input>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- STEP 2 -->
+      <div class="main-container border" *ngIf="currentStep == 2">
+          <div class="flex-container goal-content">
+              <div class="goal-flex-element-05"></div>
+              <div class="goal-container-top goal-flex-element-5">
+                  <div style="display: flex" class="white-text">
+                      <div class="flex-element-5 align-center">
+                          <h6>Nieuw doel aanmaken</h6>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="flex-container goal-content">
+              <div class="goal-flex-element-05"></div>
+              <div class="goal-container-lower goal-flex-element-5">
+                  <div style="display: flex" class="white-text">
+                      <div class="flex-element-5 align-center">
+                          <p class="padded-right">Onder welke categorie valt je doel ?</p>
+                          <ion-list>
+                            <button (click)="registerCategory('Intern manifesteren')" ion-item>
+                              Intern manifesteren
+                            </button>
+                            <button (click)="registerCategory('Extern manifesteren')" ion-item>
+                              Extern manifesteren
+                            </button>
+                            <button (click)="registerCategory('Commercieel/financieel')" ion-item>
+                              Commercieel/financieel
+                            </button>
+                          </ion-list>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- STEP 3 -->
+        <div class="main-container border" *ngIf="currentStep == 3">
+            <div class="flex-container goal-content">
+                <div class="goal-flex-element-05"></div>
+                <div class="goal-container-top goal-flex-element-5">
+                    <div style="display: flex" class="white-text">
+                        <div class="flex-element-5 align-center">
+                            <h6>Nieuw doel aanmaken</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-container goal-content">
+                <div class="goal-flex-element-05"></div>
+                <div class="goal-container-lower goal-flex-element-5">
+                    <div style="display: flex" class="white-text">
+                        <div class="flex-element-5 align-center actions">
+                            <p class="padded-right">Welke acties ga jij nemen om tot dit doel te komen?</p>
+                            <div class="action-line flex-container marginated" *ngFor="let action of actions">
+                              <ion-input disabled placeholder="Actie" class="flex-element-5 action-label" type="text" value="{{action.actionLabel}}"></ion-input>
+                              <ion-input disabled placeholder="0" class="flex-element-1 action-points" type="number" value="{{action.actionPoints}}"></ion-input>
+                            </div>
+                            <div class="action-line">
+                              <form class="flex-container marginated" [formGroup]="thirdStepForm">
+                              <ion-input formControlName="actionLabel" placeholder="Actie" class="flex-element-5 action-label" type="text"></ion-input>
+                              <ion-input formControlName="actionPoints" placeholder="0" class="flex-element-1 action-points" type="number"></ion-input>
+                            </form>
+                            </div>
+                            <button ion-button [disabled]="!thirdStepForm.valid" (click)="AddAction()">Voeg actie toe.</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Step 4 -->
+        <div class="main-container border" *ngIf="currentStep == 4">
+            <div class="flex-container goal-content">
+                <div class="goal-flex-element-05"></div>
+                <div class="goal-container-top goal-flex-element-5">
+                    <div style="display: flex" class="white-text">
+                        <div class="flex-element-5 align-center">
+                            <h6>Nieuw doel aanmaken</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-container goal-content">
+                <div class="goal-flex-element-05"></div>
+                <div class="goal-container-lower goal-flex-element-5">
+                    <div style="display: flex" class="white-text">
+                        <div class="flex-element-5 align-center">
+                            <p class="padded-right">Wanneer wil jij dit doel bereikt hebben?</p>
+                            <form [formGroup]="fourthStepForm">
+                            <div class="flex-container">
+                              <ion-item>
+                                <ion-label>startdatum</ion-label>
+                                <ion-datetime formControlName="startDate" displayFormat="DD/MM/YYYY" pickerFormat="DDDD MMMM YYYY" max="2030-01-01"></ion-datetime>
+                              </ion-item>
+                            </div>
+                            <div class="flex-container">
+                              <ion-item>
+                                <ion-label>einddatum</ion-label>
+                                <ion-datetime formControlName="endDate" displayFormat="DD/MM/YYYY" pickerFormat="DDDD MMMM YYYY" max="2030-01-01"></ion-datetime>
+                              </ion-item>
+                            </div>
+                          </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="wizzard-navigation-bar flex-container">
+  <button ion-button [disabled]="currentStep == 0" class="flex-element-1 wizzard-button" (click)="nextStep(currentStep)"><ion-icon name="arrow-back"></ion-icon></button>
+  <button ion-button class="flex-element-1 wizzard-button" (click)="routeHome()"><ion-icon name="home"></ion-icon></button>
+  <button ion-button  *ngIf="currentStep != 4" class="flex-element-1 wizzard-button" (click)="nextStep(currentStep)"><ion-icon name="arrow-forward"></ion-icon></button>
+  <button ion-button *ngIf="currentStep == 4" class="flex-element-1 wizzard-button" (click)="nextStep(currentStep)">Klaar</button>
+</div>
+
+</div>

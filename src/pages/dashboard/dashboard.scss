@@ -1,0 +1,122 @@
+page-dashboard {
+  color: #214A67;
+    background-color: #35AAA6!important;
+  .orb{
+    margin-left: auto;
+    margin-right: auto;
+    height: 35vh;
+    width: 60vw;
+    background-color: #FF7468;
+    border-radius: 100%;
+    // border: 2px solid black;
+    .content{
+      position: relative;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 1vh;
+      width: 90%;
+      img{
+        opacity: 1!important;
+      }
+    }
+  }
+}
+
+// Carousel configuration parameters
+$n: 8; // Number of images
+$item-width: 60vw; // Width of an image. In the Js version this value can be a percentage
+$item-separation: 0; // The space between the images. This will decrease the effective item width
+$viewer-distance: 250;
+
+// Derived variables
+$theta: 2 * 3.141592653589793 / $n;
+$apothem: 482.842712474619px; // == $item-width / (2 * tan(PI / $n))
+
+.carousel {
+  padding: 20px;
+  perspective: $viewer-distance;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > * {
+    flex: 0 0 auto;
+  }
+
+  figure {
+    margin: 0;
+
+    width: $item-width;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transform-origin: 50% 50% (-$apothem);
+
+    div {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 $item-separation / 2;
+
+      opacity: 1; // Just to better illustrate the placement of the carousel sides
+
+      &:not(:first-of-type) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform-origin: 50% 50% (-$apothem);
+      }
+
+      @for $i from 2 through $n {
+        &:nth-child(#{$i}) {
+          transform: rotateY(#{($i - 1) * $theta}rad);
+        }
+      }
+    }
+  }
+}
+#sneakPeak{
+  position: fixed;
+  // border: 1px solid black;
+  border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  overflow: hidden;
+  background-color: #FF7468;
+    height: 35vh;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    .content{
+      position: relative;
+      top: 25%;
+    }
+}
+.dashboard-button{
+  background-color: #0B4155;
+  color: white;
+}
+.person{
+  z-index: -100;
+  width: 40%;
+  position: fixed;
+  left: 50%;
+  margin-left: -20%;
+  bottom: 0px;
+  img{
+    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+  }
+}
+
+.centered{
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+.fwg-logo{
+  width: 125px;
+  height: 50px;
+}

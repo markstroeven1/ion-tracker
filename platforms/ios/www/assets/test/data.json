@@ -1,0 +1,38 @@
+[
+  {
+    "icon":"assets/img/Innovatie.png",
+    "name": "Meetup organiseren over angular 4",
+    "description": "Ik wil mijn nagular 4 kennis delen door meetups te organiseren.",
+    "points": 10,
+    "actions":[
+      {
+        "name": "Meetup registreren op meetup.com",
+        "description": "De meetup registreren en pakkend vorgeven op meetup.com",
+        "points": 2
+      },
+      {
+        "name": "Meetup promoten",
+        "description": "De meetup promoten om er voor te zorgen dat minimaal 75% van de plaatsen gevuld worden.",
+        "points": 5
+      },
+      {
+        "name": "Meetup evalueren",
+        "description": "Een blogpost schrijven over de meetup zodat deze op de website getoond kan worden.",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "icon":"assets/img/Bedrijf.png",
+    "name": "Klantcontact verbeteren",
+    "description": "Ik wil people skills verbeteren zodat ik beter klantcontact heb.",
+    "points": 8,
+    "actions":[
+      {
+        "name": "Acteersessies bijwonen",
+        "description": "Leren acteren.",
+        "points": 8
+      }
+    ]
+  }
+]

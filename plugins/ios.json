@@ -1,0 +1,30 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "nl.fwg.tracker"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "nl.fwg.tracker"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "nl.fwg.tracker"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "nl.fwg.tracker"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "nl.fwg.tracker"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "nl.fwg.tracker"
+        }
+    },
+    "dependent_plugins": {}
+}
