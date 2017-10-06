@@ -1,26 +1,20 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+## Project dependancies
+The ion tracker app runs on ionic2. Therefore the following is needed:
+1. NodeJS (NPM version greater than 3.0.0) -> https://nodejs.org/en/
+2. Ionic 2 cli more info -> https://ionicframework.com/docs/cli/
 
-## How to use this template
+## Getting started
+run npm install within the project root
+run ionic serve to start the live development environment
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+## Adding native platform
+run command ionic cordova platform [add, remove] [platform: ios, android]
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+## Building for Android or Ios
+http://ionicframework.com/docs/v1/guide/publishing.html
 
-### With the Ionic CLI:
+## Current status of the project
+The current build is a dummy model, no real connection to webservices or what so ever.
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+## publishing on the app store or play store
+[Moet nog een guide voor komen]
